@@ -1,0 +1,16 @@
+@import '../style/Variables.scss';
+
+
+.footer_section{
+    background-color: $Black-color;
+    color: $White-color;
+    padding:10px;
+    p{
+        font-size: 0.8rem;
+        text-transform: capitalize;
+        letter-spacing: 2px;
+        font-weight: 500;
+        margin: 0 !important;
+        text-align: center;
+    }
+}

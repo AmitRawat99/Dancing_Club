@@ -1,0 +1,132 @@
+@import '../style/Variables.scss';
+
+.header_container {
+    width: 100%;
+    background-color: #1c191933;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    height: 80px;
+    backdrop-filter: blur(8px);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+
+    .logo {
+        h2 {
+            font-family: $Roboto-Font;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            font-weight: bold;
+
+            a {
+                text-decoration: none;
+                color: $White-color;
+            }
+        }
+    }
+
+    .all_menus {
+        li {
+            font-size: 1rem;
+            text-transform: capitalize;
+            font-weight: 500;
+
+            a {
+                color: $White-color;
+                font-family: $OpenSans-Font;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+.header_container {
+    width: 100%;
+    background-color: #1c191933;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    height: 80px;
+    backdrop-filter: blur(8px);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+
+    .header_section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        h2 {
+            font-family: $Roboto-Font;
+            font-size: 1.5rem;
+            font-weight: bold;
+
+            a {
+                text-decoration: none;
+                color: $White-color;
+            }
+        }
+    }
+
+    .menu_toggle {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 4px;
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: $White-color;
+        }
+    }
+
+    .all_menus {
+        display: flex;
+        gap: 1.5rem;
+
+        li {
+            a {
+                color: $White-color;
+                text-decoration: none;
+                font-family: $OpenSans-Font;
+                font-weight: 500;
+            }
+        }
+
+        &.open {
+            width: 50%;
+            height: 100vh;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #031322;
+            z-index: 998;
+
+        }
+    }
+
+    @media (max-width: 768px) {
+        .menu_toggle {
+            display: flex;
+        }
+
+        .all_menus {
+            display: none;
+
+            &.open {
+                display: flex;
+            }
+        }
+    }
+}

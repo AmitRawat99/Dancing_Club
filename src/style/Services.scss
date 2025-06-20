@@ -1,0 +1,135 @@
+@import '../style/Variables.scss';
+
+.our_services {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .our_service_title {
+        h2 {
+            text-align: center;
+            color: $White-color;
+            font-family: $Roboto-Font;
+            font-size: 1.5rem;
+        }
+
+        p {
+            color: gray;
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+    }
+}
+
+.service_details {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px dotted #ffffff17;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 170px;
+    transition: background 0.3s ease;
+
+    &:hover {
+        background-color: crimson;
+
+        .service_icon_details {
+            p {
+                color: $White-color;
+            }
+        }
+
+        .service_icon {
+            svg {
+                color: white;
+            }
+        }
+    }
+
+    .service_icon {
+        margin-right: 15px;
+
+        svg {
+            font-size: 35px;
+            color: crimson;
+            transition: color 0.3s;
+        }
+    }
+
+    .service_icon_details {
+        color: $White-color;
+
+        h1 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        p {
+            max-width: 300px;
+            color: gray;
+            font-size: 14px;
+        }
+    }
+}
+
+// ✅ Responsive Design
+@media (max-width: 768px) {
+    .service_details {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        min-height: auto;
+        padding: 15px;
+
+        .service_icon {
+            margin: 0 0 10px 0;
+
+            svg {
+                font-size: 30px;
+            }
+        }
+
+        .service_icon_details {
+            h1 {
+                font-size: 16px;
+            }
+
+            p {
+                font-size: 13px;
+                max-width: 100%;
+            }
+        }
+    }
+
+    .our_service_title {
+        h2 {
+            font-size: 1.3rem;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .our_service_title h2 {
+        font-size: 1.1rem;
+    }
+
+    .our_service_title p {
+        font-size: 13px;
+    }
+
+    .service_icon svg {
+        font-size: 28px;
+    }
+}

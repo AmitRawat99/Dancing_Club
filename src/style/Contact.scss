@@ -1,0 +1,83 @@
+@import '../style/Variables.scss';
+
+.contact_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $White-color;
+
+    .contact_section {
+        h2 {
+            text-align: center;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+
+        p {
+            max-width: 600px;
+            text-align: center;
+            color: gray;
+            text-transform: lowercase;
+        }
+    }
+}
+
+.inputs_container {
+    margin: 30px 0;
+
+    input {
+        width: 100%;
+        margin: 20px 0;
+        background-color: transparent;
+        padding: 10px;
+        color: $White-color;
+
+        &::placeholder {
+            color: $White-color;
+        }
+
+        &:focus {
+            background-color: transparent;
+            box-shadow: none;
+            color: $White-color;
+        }
+    }
+
+    select {
+        border: 1px solid white;
+        border-radius: 8px;
+        width: 100%;
+        margin: 20px 0;
+        background-color: transparent;
+        padding: 10px;
+        color: $White-color;
+        option{
+            background-color: black;
+        }
+    }
+
+    textarea {
+        background-color: transparent;
+        color: $White-color;
+        
+
+        &:focus {
+            box-shadow: none;
+            background-color: transparent;
+            color: $White-color;
+        }
+
+        &::placeholder {
+            color: $White-color;
+        }
+    }
+
+    input[type="date"] {
+        color: white;
+    }
+}
+
+.check-now-btn{
+    display: flex;
+    justify-content: center;
+}
