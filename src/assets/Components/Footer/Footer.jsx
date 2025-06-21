@@ -1,51 +1,41 @@
-import React, { useEffect, useState } from 'react'
-import '../../../style/Footer.scss'
-import { Container, Row, Col } from 'react-bootstrap'
-import { FaFacebookF } from "react-icons/fa6";
-import { FaTwitter } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa6";
-import { FaGithub } from "react-icons/fa6";
-import { FaWhatsapp } from "react-icons/fa";
+import React, { useEffect, useState } from 'react';
+import '../../../style/Footer.scss';
+import { Container, Row, Col } from 'react-bootstrap';
+import { FaFacebookF, FaInstagram, FaGithub } from "react-icons/fa6";
+import { FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { IoMdArrowRoundUp } from "react-icons/io";
 
-
-
 function Footer() {
-    const [isOpen, setOpen] = useState(false)
-
-
-
-    const TopWebBtn = () => {
-        useEffect(() => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            })
-        })
-    }
-
+    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
-        if (window.scrollY >= 300) {
-            setOpen(true)
-        }
-        else {
-            setOpen(false)
-        }
+        const handleScroll = () => {
+            if (window.scrollY > 300) {
+                setIsVisible(true);
+            } else {
+                setIsVisible(false);
+            }
+        };
 
-        window.addEventListener("click", TopWebBtn)
+        window.addEventListener('scroll', handleScroll);
 
-        return (() => window.removeEventListener("click", TopWebBtn))
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
-    }, [])
-
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
 
     return (
         <>
             <Container fluid>
-
                 <div className="footer_section mt-5">
-                    <Container >
+                    <Container>
                         <Row>
                             <Col lg={3} md={4} sm={6}>
                                 <div className="footer_content">
@@ -54,7 +44,7 @@ function Footer() {
                                         <div className="footer_sub">
                                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, dolore.</p>
                                         </div>
-                                        <div className="footer_section_icon flex gap-3 ">
+                                        <div className="footer_section_icon d-flex gap-3">
                                             <FaFacebookF />
                                             <FaTwitter />
                                             <FaInstagram />
@@ -63,6 +53,7 @@ function Footer() {
                                     </div>
                                 </div>
                             </Col>
+
                             <Col lg={3} md={4} sm={6}>
                                 <div className="footer_content">
                                     <div className="footer_details">
@@ -78,6 +69,7 @@ function Footer() {
                                     </div>
                                 </div>
                             </Col>
+
                             <Col lg={3} md={4} sm={6}>
                                 <div className="footer_content">
                                     <div className="footer_details">
@@ -93,18 +85,20 @@ function Footer() {
                                     </div>
                                 </div>
                             </Col>
+
                             <Col lg={3}>
                                 <div className="footer_content">
                                     <div className="footer_details">
                                         <h1>Contact</h1>
                                         <div className="footer_list">
                                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                            <p>Call  : <a href="callto:918787678765">+918787678765</a></p>
-                                            <p>Email : <a href="mailto:supportshop2123@">supportshop2123@gmail.com</a></p>
+                                            <p>Call : <a href="tel:+918787678765">+918787678765</a></p>
+                                            <p>Email : <a href="mailto:supportshop2123@gmail.com">supportshop2123@gmail.com</a></p>
                                         </div>
                                     </div>
                                 </div>
                             </Col>
+
                             <Row className="footer_bottom mt-4 text-center">
                                 <Col lg={12}>
                                     <p>&copy; {new Date().getFullYear()} Dancing Club. All rights reserved.</p>
@@ -118,12 +112,14 @@ function Footer() {
                     <FaWhatsapp />
                 </div>
 
-                <div className="footer_arrow" onClick={TopWebBtn}>
-                    <IoMdArrowRoundUp />
-                </div>
+                {isVisible && (
+                    <div className="footer_arrow" onClick={scrollToTop} title="Go to top">
+                        <IoMdArrowRoundUp />
+                    </div>
+                )}
             </Container>
         </>
-    )
+    );
 }
 
-export default Footer
+export default Footer;
