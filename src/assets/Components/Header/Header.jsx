@@ -14,7 +14,7 @@ function Header() {
                         <Col>
                             <div className="header_section flex justify-between items-center">
                                 <div className="logo">
-                                    <h2><Link to="/">Club Logo</Link></h2>
+                                    <h2><Link to="/Dancing_Club/">Club Logo</Link></h2>
                                 </div>
 
                                 {/* Hamburger Icon */}
@@ -26,12 +26,12 @@ function Header() {
 
                                 {/* Navigation Menu */}
                                 <ul className={`all_menus ${isMenuOpen ? 'open' : ''} flex list-none items-center gap-5`}>
-                                    <li><Link to="/">Home</Link></li>
-                                    <li><Link to="/about">About</Link></li>
-                                    <li><Link to="/reservation">Reservation</Link></li>
-                                    <li><Link to="/resort">Resort</Link></li>
-                                    <li><Link to="/service">Services</Link></li>
-                                    <li><Link to="/contact">Contact</Link></li>
+                                    <li><Link to="/Dancing_Club/">Home</Link></li>
+                                    <li><Link to="/Dancing_Club/about">About</Link></li>
+                                    <li><Link to="/Dancing_Club/reservation">Reservation</Link></li>
+                                    <li><Link to="/Dancing_Club/resort">Resort</Link></li>
+                                    <li><Link to="/Dancing_Club/service">Services</Link></li>
+                                    <li><Link to="/Dancing_Club/contact">Contact</Link></li>
                                 </ul>
                             </div>
                         </Col>

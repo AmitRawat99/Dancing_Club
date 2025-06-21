@@ -1,0 +1,70 @@
+@import '../style/Variables.scss';
+
+
+.function_container {
+    margin: 50px 0;
+
+    .functins_cards {
+        height: 250px;
+        border: 1px solid #d3d3d36c;
+        position: relative;
+        margin: 50px 0;
+        padding: 10px 20px;
+        border-radius: 5px;
+
+        .function_title {
+            h2 {
+                font-size: 1.5rem;
+                letter-spacing: 1px;
+                color: $White-color;
+                font-weight: bold;
+                font-family: $OpenSans-Font;
+            }
+        }
+
+        .function_description {
+            p {
+                color: #e4e4e4;
+            }
+        }
+
+        .function_button {
+            position: absolute;
+            bottom: 20px;
+
+            a {
+                text-decoration: none;
+                color: #e4e4e4ee;
+
+                button {
+                    width: 180px;
+                    padding: 7px 0;
+                    border: 1px solid #d3d3d348;
+                    border-radius: 5px;
+                    border-radius: 3px;
+                    cursor: pointer;
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .function_section_title {
+        h1 {
+            color: $White-color;
+            font-size: 2rem;
+            font-family: $Roboto-Font;
+            text-align: center;
+        }
+
+        p {
+            color: gray;
+            font-size: 1rem;
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+    }
+}

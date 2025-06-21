@@ -1,0 +1,164 @@
+@import '../style/Variables.scss';
+
+
+
+.function_containers {
+    margin-top: 50px;
+    padding: 20px;
+
+    .functins_cards {
+        height: 250px;
+        padding: 20px;
+
+        border: 1px solid #d3d3d36c;
+        position: relative;
+        border-radius: 5px;
+
+        .function_title {
+            h2 {
+                font-size: 1.5rem;
+                letter-spacing: 1px;
+                color: $White-color;
+                font-weight: bold;
+                font-family: $OpenSans-Font;
+            }
+        }
+
+        .function_description {
+            p {
+                color: #e4e4e4;
+            }
+        }
+
+        .function_button {
+            position: absolute;
+            bottom: 20px;
+
+            a {
+                text-decoration: none;
+                color: #e4e4e4ee;
+
+                button {
+                    width: 180px;
+                    padding: 7px 0;
+                    border: 1px solid #d3d3d348;
+                    border-radius: 5px;
+                    border-radius: 3px;
+                    cursor: pointer;
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .function_section_title {
+        h1 {
+            color: $White-color;
+            font-size: 2rem;
+            font-family: $Roboto-Font;
+            text-align: center;
+        }
+
+        p {
+            color: gray;
+            font-size: 1rem;
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+    }
+}
+
+.form_container {
+    padding: 20px;
+
+    .form_title {
+        margin: 60px 0;
+
+        h1 {
+            text-align: center;
+            font-family: $Roboto-Font;
+            font-size: 2rem;
+            color: $White-color;
+        }
+    }
+
+    label {
+        color: $White-color;
+        font-size: 1.1rem;
+        font-weight: bold;
+        font-family: cursive;
+    }
+
+    input {
+        background-color: transparent;
+        color: $White-color;
+        border: 1px solid #d3d3d34f !important;
+
+        &:focus {
+            color: $White-color;
+            background-color: transparent;
+            box-shadow: none;
+        }
+
+        &::placeholder {
+            color: $White-color;
+        }
+    }
+
+    select {
+        background-color: transparent;
+        color: $White-color;
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        option {
+            color: $White-color;
+            background-color: $Black-color;
+        }
+    }
+
+    textarea {
+        background-color: transparent;
+        color: $White-color;
+
+        &:focus {
+            background-color: transparent;
+            color: $White-color;
+            box-shadow: none;
+        }
+
+        &::placeholder {
+            color: $White-color;
+        }
+
+        option {
+            color: $White-color;
+            background-color: $Black-color;
+        }
+    }
+}
+
+.function_party_images{
+    .party_container{
+        display: flex;
+        gap: 10px;
+        margin: 30px 0;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 250px;
+            cursor: pointer;
+            height: 200px;
+
+            &:hover{
+                transition:0.5s ease-in;
+                transform: scale(1.03);
+            }
+        }
+    }
+}

@@ -25,7 +25,7 @@ function Banners({ children, backgroundImage, icon, section, gradient = true }) 
     return (
         <>
             <Container>
-                <div className="aboutus_banner" style={backgroundImage}>
+                <div className="aboutus_banner" style={aboutBanner}>
                     <div className="aboutus_content">
                         <h1>{children}</h1>
                         <div className="aboutus_url flex  items-center ">

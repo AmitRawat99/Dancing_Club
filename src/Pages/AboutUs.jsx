@@ -11,7 +11,7 @@ import Accordion from '../assets/share/Accordions';
 function AboutUs() {
   return (
     <>
-      <Banners gradient={true} children={"Your Ultimate Dance Destination"} aboutBanner={aboutBanner} icon={IoHome} section={"About Us"} />
+      <Banners gradient={true} children={"Your Ultimate Dance Destination"} backgroundImage={aboutBanner} icon={IoHome} section={"About Us"} />
       <About />
       <Accordion/>
     </>

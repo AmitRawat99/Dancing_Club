@@ -1,12 +1,11 @@
 import React from 'react'
 import '../style/Resort.scss'
+import Our_Functions from '../assets/share/Our_Functions'
 
 function Reservation() {
     return (
         <>
-            <div className="resort_container">
-                <h1>Coming Soon.....</h1>
-            </div>
+        <Our_Functions/>
         </>
     )
 }

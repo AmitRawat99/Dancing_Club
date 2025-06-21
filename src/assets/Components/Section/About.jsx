@@ -8,7 +8,7 @@ import { GiJugglingClubs } from "react-icons/gi";
 function About() {
 
   const paginations = [1, 2, 3]
-  const [active, setActive] = useState(0)
+  const [active, setActive] = useState(1)
 
   const aboutDescriptions = [
     {
